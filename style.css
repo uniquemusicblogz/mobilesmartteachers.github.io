@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* --- Base --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* --- Utilities (Reflecting Tailwind Config) --- */
+/* These are just helpers if needed outside of Tailwind classes */
+.text-mst-orange { color: #FF6600; }
+.bg-mst-orange { background-color: #FF6600; }
+
+.text-mst-cyan { color: #00CCFF; }
+.bg-mst-cyan { background-color: #00CCFF; }
+
+.text-mst-yellow { color: #FFCC00; }
+.bg-mst-yellow { background-color: #FFCC00; }
+
+.text-mst-green { color: #33CC33; }
+.bg-mst-green { background-color: #33CC33; }
+
+.text-mst-pink { color: #FF3399; }
+.bg-mst-pink { background-color: #FF3399; }
+
+.bg-mst-black { background-color: #000000; }
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* --- Pattern Backgrounds --- */
+.bg-pattern {
+    /* Updated to use Cyan dot pattern */
+    background-image: radial-gradient(#00CCFF 0.8px, transparent 0.8px), radial-gradient(#00CCFF 0.8px, #ffffff 0.8px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+}
+
+/* --- Mobile Menu Transition --- */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.open {
+    max-height: 400px; /* Adjusted for taller menu */
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+::-webkit-scrollbar-thumb {
+    background: #d1d5db; /* Gray-300 */
+    border-radius: 5px;
+    border: 2px solid #f3f4f6;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af; /* Gray-400 */
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f3f4f6;
+}

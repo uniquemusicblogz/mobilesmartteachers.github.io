@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <script>
+  // Send visitors from the GitHub address to the custom domain.
+  // The check stops the page from redirecting to itself on the custom domain.
+  if (location.hostname === 'mobilesmartteachers.github.io') {
+    location.replace('https://mobilesmartteachers.online/index.html');
+  }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="desscription" content="Mobile Smart Teachers - Premier Home and Online Tuition Centre. Expert tutors for ECZ, Cambridge, and more.">

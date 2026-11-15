@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <script>
-  // Send visitors from the GitHub address to the custom domain.
-  // The check stops the page from redirecting to itself on the custom domain.
+   <script>
+  // Send visitors from the GitHub address to the same page on the custom domain.
   if (location.hostname === 'mobilesmartteachers.github.io') {
-    location.replace('https://mobilesmartteachers.online');
+    location.replace('https://mobilesmartteachers.online' + location.pathname + location.search + location.hash);
   }
 </script>
     <meta charset="UTF-8">
